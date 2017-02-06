@@ -144,8 +144,8 @@ void in_order_traverse(struct node* start, FILE *output){
         // Print each word and its count.
         printf("Word: \'%s\'\n", start->word);
         printf("Count: %d\n",start->count);
-        fprintf(output,"Word: \'%s\'\n", start->word);
-        fprintf(output,"Count: %d\n",start->count);
+        fprintf(output,"%s:", start->word);
+        fprintf(output," %d\n",start->count);
         // Recursive transit of right children.
         in_order_traverse(start->right_child,output);
     }
